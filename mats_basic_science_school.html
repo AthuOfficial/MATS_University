@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans">
 
     <!-- Latest compiled and miniedif CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -281,9 +282,57 @@
       }
     }
     </style>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <style>
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+button.accordion.active, button.accordion:hover {
+    background-color: #ddd;
+}
+
+button.accordion:after {
+    content: '\002B';
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+button.accordion.active:after {
+    content: "\2212";
+}
+
+div.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+</style>
+<style>
+.accordion{
+color: #274472;
+background: #e2eaf2;
+padding: 15px 20px 15px 45px;
+position: relative;
+border-radius: 3px;
+-webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+border-top: 0.5px solid #f3f7fa;
+cursor: pointer;
+}
+</style>
 </head>
 <body style="font-family: raleway;">
 <div>
@@ -485,47 +534,28 @@
     Under these courses, the specializations will be offered in selected science subjects at Post graduation level. Advanced knowledge will be imparted in the chosen subjects which will lead to teaching, research, or industrial profession. In addition to the regular subjects (like Physics, Chemistry, Mathematics, Botany) some newer subjects like Nano-Science & Technology, Software Engineering, Computational Mathematics, Materials Science and Condensed Matter Physics, Environmental and Non-conventional Energy Sciences will also be undertaken at M. Sc. level.
   </p>
 </div>
-
-<div class="container">
-  <div class="panel-group" id="accordion">
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Collapsible Group 1</a>
-        </h4>
-      </div>
-      <div id="collapse1" class="panel-collapse collapse in">
-        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
-      </div>
-    </div>
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Collapsible Group 2</a>
-        </h4>
-      </div>
-      <div id="collapse2" class="panel-collapse collapse">
-        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
-      </div>
-    </div>
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Collapsible Group 3</a>
-        </h4>
-      </div>
-      <div id="collapse3" class="panel-collapse collapse">
-        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
-      </div>
-    </div>
-  </div>
+<br><br>
+<strong><h3 style="margin-left: 5%; width: 60%;font-weight: bold">POST GRADUATE PROGRAM</h3></strong>
+<br>
+<div style="width: 60%; margin-left: 5%">
+<button class="accordion"><b>M. Sc. (Master of Science)</b></button>
+<div style="background-color: #f2f2f2" class="panel">
+  <br>
+  <p style="font-weight: bold">Duration</p>
+  <p>Two Years (or four semesters) </p>
+  <br>
+  <p style="font-weight: bold">Academic Year </p>
+  <p>July to June.</p>
+  <br>
+  <p style="font-weight: bold">Stream</p>
+  <p>Chemistry</p>
+  <br>
+  <p style="font-weight: bold">Course Structure </p>
+  <p>Contact - admissions@matsuniversity.ac.in</p>
 </div>
+</div>
+
+
 
 
 
@@ -547,7 +577,7 @@
                 <li><i class="fa fa-angle-right"></i>  About MATS</li>
                 <li ><i class="fa fa-angle-right"></i>  Academics</li>
                 <li ><i class="fa fa-angle-right"></i>  School &nbsp;&nbsp;Programs</li>
-                <li ><i class="fa fa-angle-right"></i>  MATS Schools</li>
+                <li ><i class="fa fa-angle-right"></i>  MATS &nbsp;&nbsp;Schools</li>
                 <li ><i class="fa fa-angle-right"></i>  Career</li>
                 <li ><i class="fa fa-angle-right"></i>  Gallery</li>
                 <li ><i class="fa fa-angle-right"></i>  NIRF</li>
@@ -777,6 +807,22 @@
          */
         offSetManager();
     });
+</script>
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].onclick = function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight){
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+  }
+}
 </script>
 </body>
 </html>
