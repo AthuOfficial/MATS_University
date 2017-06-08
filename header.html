@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>MATS University</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="header.css" type="text/css">
+    <link href="animate.css" type="text/css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <!-- Latest compiled and miniedif CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script>
+        $("#demo").bootstrapDropdownOnHover();
+        $("#demo").bootstrapDropdownOnHover({
+
+            mouseOutDelay: 500, // Number of milliseconds to wait before closing the menu on mouseleave
+
+        responsiveThreshold: 992, // Pixel width where the menus should no-longer be activated by hover
+
+        hideBackdrop: true // Whether to remove the menu backdrop upon hover (mobile only)
+
+        });
+
+    </script>
+    <script>
+        function init() {
+            window.addEventListener('scroll', function(e){
+                var distanceY = window.pageYOffset || document.documentElement.scrollTop,
+                    shrinkOn = 20,
+                    header = document.querySelector("header");
+                if (distanceY > shrinkOn) {
+                    classie.add(header,"smaller");
+                    $(".head").css('background','rgb(100,100,100)');
+                } else {
+                    if (classie.has(header,"smaller")) {
+                        classie.remove(header,"smaller");
+                    }
+                }
+            });
+        }
+        window.onload = init();
+    </script>
+    <style>
+        .head{
+            background: transparent;
+        }
+        .dropbtn {
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {background-color: #f1f1f1}
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: #2884C3;
+        }
+        *{
+            box-sizing:border-box;
+        }
+
+        footer{
+            font-family: 'Raleway';
+            width:100%;
+            height: 90%;
+            color: #FFF;
+        }
+
+        /* clearfix http://css-tricks.com/snippets/css/clear-fix/ */
+        footer:after{
+            visibility: hidden;
+            display: block;
+            font-size: 0;
+            content: " ";
+            clear: both;
+            height: 0;
+        }
+
+        footer>ul{
+            float:left;
+            list-style-type:none;
+            width: 25%;
+        }
+        .twitter-widget-area{
+            background:url(../img/twitter-widget-bg.png) 55px center no-repeat;
+        }
+
+        .twitter-widget ul{
+            list-style:none;
+            margin:0 0 20px;
+            padding:0;
+        }
+
+        .twitter-widget li{
+            color:#e2eaf2;
+            font-size:15px;
+            font-style:italic;
+        }
+
+        .twitter-widget a{
+            color:#97acc3;
+        }
+
+        .twitter-widget li>span{
+            display:inline-block;
+        }
+
+        .twitter-widget .tweet_time>a{
+            color:#808ca4;
+            font-size:13px;
+        }
+
+        a.button.twitter-button{
+            background:#40bff5;
+            border-top-color:#53d2f8;
+            border-bottom-color:#36a6d6;
+            color:#fff;
+            height:35px;
+            border-bottom:none;
+        }
+
+        a.button.twitter-button:after{
+            content:'';
+            display:none;
+        }
+
+        a.button.twitter-button:before{
+            content: '\e965';
+            font-family: "fontello";
+            font-style: normal;
+            font-weight: normal;
+            speak: none;
+            display: inline-block;
+            text-decoration: inherit;
+            width: 1em;
+            margin-right: .2em;
+            text-align: center;
+            font-variant: normal;
+            text-transform: none;
+            line-height: 1em;
+            margin-left: .2em;
+            margin-left:-5px;
+            margin-right:10px;
+            color:#b1e1fa;
+            transition:color 0.2s;
+            -webkit-transition:color 0.2s;
+            -moz-transition:color 0.2s;
+        }
+
+        a.button.twitter-button:hover{
+            background:#e2eaf2;
+            color:#274472;
+            border-top-color:#f3f7fa;
+            border-bottom-color:#e2eaf2;
+        }
+
+        a.button.twitter-button:hover:before{
+            color:#40bff5;
+        }
+
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#sitemap").click(function(){
+                $("#site").slideToggle("slow");
+            });
+        });
+    </script>
+    <style>
+    @media only screen and (max-width: 768px) {
+      .grid{
+        margin-left: 13%;
+        padding-right: 5%;
+        margin-top: 10%;
+        width: 100%;
+        float: left;
+      }
+
+    .nestedgrid{
+      margin-left: 2%;
+      width: 48%;
+      float: left;
+      }
+    .responsivesite{
+        text-align: center;
+      }
+      .innersite{
+        margin-left: 17%;
+        margin-top: 5%;
+      }
+      .lowerfooter{
+        width: 100%;
+        float: left;
+        border: none;
+      }
+      .lowerfooterimg{
+        width: 100%;
+        margin-right: 50%;
+        float: left;
+      }
+    }
+    @media only screen and (max-width: 500px) {
+      .grid{
+        margin-left: 13%;
+        padding-right: 5%;
+        width: 100%;
+        float: left;
+      }
+      .nestedgrid{
+        margin-left: 2%;
+        width: 48%;
+        float: left;
+      }
+      .responsivesite{
+        text-align: center;
+      }
+      .innersite{
+        margin-left: 17%;
+        margin-top: 5%;
+      }
+      .lowerfooter{
+        width: 100%;
+        float: left;
+        border: none;
+      }
+      .lowerfooterimg{
+        width: 100%;
+          margin-right: 50%;
+        float: left;
+      }
+    }
+    </style>
+</head>
+<body style="font-family: raleway;">
+<div>
+    <div id="inner1">
+<div id="myDiv">
+    <button class="close" onclick="document.getElementById('myDiv').style.display='none'" style="margin-left: 90%;"><svg style="width:22px;height:22px" viewBox="0 0 24 24">
+        <path fill="#000000" d="M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2C6.47,2 2,6.47 2,12C2,17.53 6.47,22 12,22C17.53,22 22,17.53 22,12C22,6.47 17.53,2 12,2M14.59,8L12,10.59L9.41,8L8,9.41L10.59,12L8,14.59L9.41,16L12,13.41L14.59,16L16,14.59L13.41,12L16,9.41L14.59,8Z" />
+    </svg></button>
+
+    <div class="row">
+        <div class="col-sm-4" id="style" style="color: white">
+            Announcements|
+        </div>
+        <div class="col-sm-8">
+            <a href="#"><p class="item-1" style="color:white;">This is announcement 1</p></a>
+
+            <a href="#"><p class="item-2" style="color:white;">This is announcement 2</p></a>
+
+            <a href="#"><p class="item-3" style="color:white;">This is announcement 3</p></a>
+        </div>
+    </div>
+</div>
+    </div>
+<!-- Fixed navbar -->
+<div id="inner2">
+<nav id="header" class="navbar navbar-fixed-top">
+    <div id="header-container" class="container navbar-container">
+        <div class="navbar-header">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+            <a id="brand" class="navbar-brand" href="#">MATS University</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul id="demo" class="nav navbar-nav navbar-right collapse navbar-collapse">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">About MATS<b class="caret"></b></a>
+                    <ul class="dropdown-menu animated slideDown">
+                        <li><a href="#">Vision and Mission</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Our Values</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Chancellor's Message</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Vice Chancellor's Message</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Promoter Message</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Approvals and Recognitions</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Our Leadership</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Organizational Hierarchy</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">State of The Art Infrastructure</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Monthly Progress Report</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">CGPURC Headline</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Beyond Academics<b class="caret"></b></a>
+                    <ul class="dropdown-menu animated slideDown">
+                        <li><a href="#">MATS Sports</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">MATSotsav</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">MATS Social Program</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">MATS Hostel</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Insdustrial Tour</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">RTI Act</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Academics<b class="caret"></b></a>
+                    <ul class="dropdown-menu animated slideDown">
+                        <li><a href="#">Academic Scheduling</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Academic Calender</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Students Achievements</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Seminar and Programs</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Newsletters</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Anit-Raggingk</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Academic Fees</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">MATS Schools<b class="caret"></b></a>
+                    <ul class="dropdown-menu animated slideDown">
+                        <li><a href="#">MATS School of Basic Sciences</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">MATS School of Business Studies</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">MATS School of Education</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">MATS School of Engineering and Information Technology</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">MATS School of Fashion Designing</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">MATS School of Arts and Humanities</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">MATS School of Information Technology</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">MATS School of Law</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">MATS School of Biological and Chemical Sciences</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">MATS School of Managment Studies and Research</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">MATS School of Physical Education</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Research Programs</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Admission Details</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Distance Education<b class="caret"></b></a>
+                    <ul class="dropdown-menu animated slideDown">
+                        <li><a href="#">Overview</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Courses Offered</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Exam Time Table</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Admit Cards</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Assignments</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Notice</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Projects</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Results</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">School Programs<b class="caret"></b></a>
+                    <ul class="dropdown-menu animated slideDown">
+                        <li><a href="#">Teaching Pedagogy</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Programs Offered</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Proposed Programs</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">MATS Research Center</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Gallery<b class="caret"></b></a>
+                    <ul class="dropdown-menu animated slideDown">
+                        <li><a href="#">MATS Utsav</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Annual Sports</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Convocation Gallery</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Image Gallery</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Video Gallery</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div><!-- /.nav-collapse -->
+    </div><!-- /.container -->
+</nav><!-- /.navbar -->
+</div>
+</div>
+
+<div class="container">
+
+    <div class="row row-offcanvas row-offcanvas-right">
+
+        <div class="col-xs-12 col-sm-9">
+            <div class="jumbotron">
+                <h1>Hello, world!</h1>
+                <p>This is an example to show the potential of an offcanvas layout pattern in Bootstrap. Try some responsive-range viewport sizes to see it in action.</p>
+            </div>
+            <div class="row">
+                <div class="col-xs-6 col-lg-4">
+                    <h2>Heading</h2>
+                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                    <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
+                </div><!--/.col-xs-6.col-lg-4-->
+                <div class="col-xs-6 col-lg-4">
+                    <h2>Heading</h2>
+                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                    <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
+                </div><!--/.col-xs-6.col-lg-4-->
+                <div class="col-xs-6 col-lg-4">
+                    <h2>Heading</h2>
+                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                    <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
+                </div><!--/.col-xs-6.col-lg-4-->
+                <div class="col-xs-6 col-lg-4">
+                    <h2>Heading</h2>
+                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                    <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
+                </div><!--/.col-xs-6.col-lg-4-->
+                <div class="col-xs-6 col-lg-4">
+                    <h2>Heading</h2>
+                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                    <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
+                </div><!--/.col-xs-6.col-lg-4-->
+                <div class="col-xs-6 col-lg-4">
+                    <h2>Heading</h2>
+                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                    <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
+                </div><!--/.col-xs-6.col-lg-4-->
+            </div><!--/row-->
+        </div><!--/.col-xs-12.col-sm-9-->
+
+        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
+            <div class="list-group">
+                <a href="#" class="list-group-item active">Link</a>
+                <a href="#" class="list-group-item">Link</a>
+                <a href="#" class="list-group-item">Link</a>
+                <a href="#" class="list-group-item">Link</a>
+                <a href="#" class="list-group-item">Link</a>
+                <a href="#" class="list-group-item">Link</a>
+                <a href="#" class="list-group-item">Link</a>
+                <a href="#" class="list-group-item">Link</a>
+                <a href="#" class="list-group-item">Link</a>
+                <a href="#" class="list-group-item">Link</a>
+            </div>
+        </div><!--/.sidebar-offcanvas-->
+    </div><!--/row-->
+
+    <hr>
+
+
+</div><!--/.container-->
+<div id="wrapper">
+
+
+
+
+
+
+  <footer style="background-color: #333333; font-family: raleway;">
+    <div style="padding-top: 4%; margin-left: -50px">
+      <div class="container" style="color: #CCC">
+        <div class="row">
+          <div class="col-sm-3 grid">
+            <h4>ABOUT MATS</h4>
+            <br>
+            <p> To become a world class center in providing globally relevant education. MATS will be the Global University, known for the quality academic programs and outstanding faculty, products and services to students and clients independent of place and time constraint. </p>
+          </div>
+          <div class="col-sm-3 grid">
+            <div class="row">
+              <div class="col-sm-6 nestedgrid">
+            <h4>MATS</h4>
+            <br>
+            <ul>
+                <li><i class="fa fa-angle-right"></i>  About MATS</li>
+                <li ><i class="fa fa-angle-right"></i>  Academics</li>
+                <li ><i class="fa fa-angle-right"></i>  School &nbsp;&nbsp;Programs</li>
+                <li ><i class="fa fa-angle-right"></i>  MATS Schools</li>
+                <li ><i class="fa fa-angle-right"></i>  Career</li>
+                <li ><i class="fa fa-angle-right"></i>  Gallery</li>
+                <li ><i class="fa fa-angle-right"></i>  NIRF</li>
+            </ul>
+          </div>
+          <div class="col-sm-6 nestedgrid">
+            <br><br>
+            <ul>
+                <li  style="margin-top: 16px"><i class="fa fa-angle-right"></i>  Beyond &nbsp;&nbsp;Academics</li>
+                <li ><i class="fa fa-angle-right"></i>  Distance &nbsp;&nbsp;Education</li>
+                <li ><i class="fa fa-angle-right"></i>  School &nbsp;&nbsp;Programs</li>
+                <li ><i class="fa fa-angle-right"></i>  Make calls</li>
+                <li ><i class="fa fa-angle-right"></i>  Press release</li>
+                <li ><i class="fa fa-angle-right"></i>  Site Map</li>
+                <li ><i class="fa fa-angle-right"></i>  Contact Us</li>
+            </ul>
+          </div>
+
+          </div>
+        </div>
+        <div class="col-sm-3 grid">
+          <h4>LATEST TWEETS</h4>
+          <br>
+          <button style="background: #40bff5; color: white; font-size: 14px; width: 210px; border-radius: 3px; border: none;"><i class="fa fa-fw fa-twitter"></i> FOLLOW US ON TWITTER</button>
+        </div>
+        <div class="col-sm-3 grid">
+          <h4>LIKE US ON FACEBOOK</h4>
+          <br>
+          <iframe src="https://www.facebook.com/plugins/page.php?href=https://www.facebook.com/matsraipur/?ref=br_rs" width="340" height="210px" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+        </div>
+  </div>
+  <br>
+    </div>
+  <hr style="max-width: 100%">
+  <div class="responsivesite" id="sitemap">
+    <p style="margin-left: 5%; color: #CCC">+ Site Map</p>
+  </div>
+  <div id="site" style="display: none">
+    <br>
+    <div class="container" style="color: #CCC; font-family: raleway;">
+      <div class="row">
+        <div class="col-sm-3 innersite">
+          <b><h4>ABOUT MATS</h4></b>
+
+          <ul>
+              <li >Vision and mission</li>
+              <li >Our values</li>
+              <li >Chancellor's message</li>
+              <li >Vice Chancellor's message</li>
+              <li >Promoter Message</li>
+              <li >Approvals and Recognitions</li>
+              <li >Our Leadership</li>
+              <li >Organizational Hierarchy</li>
+              <li >State Of The Art Infrastructure</li>
+              <li >Monthly Progress Report</li>
+          </ul>
+        </div>
+
+            <div class="col-sm-3 innersite">
+          <b><h4>BEYOND ACADEMICS</h4></b>
+
+          <ul>
+              <li >MATS Sports</li>
+              <li >MATSotsav</li>
+              <li >School Programs</li>
+              <li >MATS Social Program</li>
+              <li >MATS Hostel</li>
+              <li >Industrial Tour</li>
+          </ul>
+          <br>
+          <b><h4>SCHOOL PROGRAMS</h4></b>
+
+          <ul>
+              <li >Teaching Pedagogy</li>
+              <li >Programs Offered</li>
+              <li >Proposed Programs</li>
+              <li >MATS Research Center</li>
+          </ul>
+        </div>
+        <div class="col-sm-3 innersite">
+          <b><h4>ACADEMICS</h4></b>
+
+          <ul>
+              <li >Academics Scheduling</li>
+              <li >Academic Calendar</li>
+              <li >Student Achievements</li>
+              <li >Seminar &amp; Programs</li>
+              <li >Anti Ragging</li>
+          </ul>
+          <br>
+          <b><h4>GALLERY</h4></b>
+
+          <ul>
+              <li >Convocation Gallery</li>
+              <li >Image Gallery</li>
+              <li >Video Gallery</li>
+          </ul>
+          <br>
+          <b><h4>OTHERS</h4></b>
+
+          <ul>
+              <li >Download</li>
+              <li >Career</li>
+              <li >Online Forms</li>
+              <li >Distance Education</li>
+          </ul>
+        </div>
+        <div class="col-sm-3 innersite">
+          <b><h4>MATS SCHOOLS</h4></b>
+
+          <ul>
+              <li >MATS School of Basic Sciences</li>
+              <li >MATS School of Business Studies</li>
+              <li >MATS School of Education</li>
+              <li >MATS School of Engineering and Technology</li>
+              <li >MATS School of Fashion Designing</li>
+              <li >MATS School of Arts and Humanities</li>
+              <li >MATS School of Information Technology</li>
+              <li >MATS School of Law</li>
+              <li >MATS School of Life Sciences</li>
+              <li >MATS School of Management Studies and Research</li>
+              <li >MATS School of Physical Education</li>
+              <li >Research Programs</li>
+          </ul>
+        </div>
+        </div>
+      </div>
+    </div>
+    </div><hr style="width: 100%">
+  </div>
+
+
+  </footer>
+
+
+</div><!-- /#wrapper -->
+
+<div class="row" style="background-color: #292929; width: 100%; color: #555; margin: 0px; padding-bottom: 2%;font-size: 20px; margin-top: -3%; padding-top: 2%;">
+    <div class="col-sm-3 ">
+        <div class="mycontent-left lowerfooterimg" style="padding-left: 70%;">
+            <img src="logo.jpg" style="width: 100%; height: 100%">
+        </div>
+    </div>
+    <div class="col-sm-9 lowerfooter">
+        <div class="mycontent-right lowerfooter" style="font-size: 80%; font-family: raleway; padding-left: 2%; border-left: 1px solid #fff">
+        <strong>MATS University</strong>,Raipur,CG<br>MATS Tower,Pandri,Raipur(492 002)<br>Website:www.matsuniversity.ac.in<br>Tel:+91 7000910036<br>Email: admissions@matsuniversity.ac.in
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function(){
+
+        /**
+         * This object controls the nav bar. Implement the add and remove
+         * action over the elements of the nav bar that we want to change.
+         *
+         * @type {{flagAdd: boolean, elements: string[], add: Function, remove: Function}}
+         */
+        var myNavBar = {
+
+            flagAdd: true,
+
+            elements: [],
+
+            init: function (elements) {
+                this.elements = elements;
+            },
+
+            add : function() {
+                if(this.flagAdd) {
+                    for(var i=0; i < this.elements.length; i++) {
+                        document.getElementById(this.elements[i]).className += " fixed-theme";
+                    }
+                    this.flagAdd = false;
+                }
+            },
+
+            remove: function() {
+                for(var i=0; i < this.elements.length; i++) {
+                    document.getElementById(this.elements[i]).className =
+                        document.getElementById(this.elements[i]).className.replace( /(?:^|\s)fixed-theme(?!\S)/g , '' );
+                }
+                this.flagAdd = true;
+            }
+
+        };
+
+        /**
+         * Init the object. Pass the object the array of elements
+         * that we want to change when the scroll goes down
+         */
+        myNavBar.init(  [
+            "header",
+            "header-container",
+            "brand"
+        ]);
+
+        /**
+         * Function that manage the direction
+         * of the scroll
+         */
+        function offSetManager(){
+
+            var yOffset = 0;
+            var currYOffSet = window.pageYOffset;
+
+            if(yOffset < currYOffSet) {
+                myNavBar.add();
+            }
+            else if(currYOffSet == yOffset){
+                myNavBar.remove();
+            }
+
+        }
+
+        /**
+         * bind to the document scroll detection
+         */
+        window.onscroll = function(e) {
+            offSetManager();
+        }
+
+        /**
+         * We have to do a first detectation of offset because the page
+         * could be load with scroll down set.
+         */
+        offSetManager();
+    });
+</script>
+</body>
+</html>
