@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
     <!-- Latest compiled and miniedif CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -297,7 +297,8 @@
 }
 
 button.accordion.active, button.accordion:hover {
-    background-color: #ddd;
+    background-color: #63b2f5;
+    color: white;
 }
 
 button.accordion:after {
@@ -331,6 +332,21 @@ border-radius: 3px;
 -moz-border-radius: 3px;
 border-top: 0.5px solid #f3f7fa;
 cursor: pointer;
+}
+.sidebtn{
+  text-align: left;
+  color: #274472;
+  background: #e2eaf2;
+  padding: 15px 20px 15px 45px;
+  position: relative;
+  border: 0px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  cursor: pointer;
+}
+.sidebtn:hover{
+  color: white;
+  background-color: #63b2f5;
 }
 </style>
 </head>
@@ -371,6 +387,7 @@ cursor: pointer;
                 <span class="icon-bar"></span>
             </a>
             <a id="brand" class="navbar-brand respnav" href="#">MATS University</a>
+
             <i class="fa fa-bars respbtn" aria-hidden="true" style="display: none"></i>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
@@ -518,14 +535,23 @@ cursor: pointer;
 </div>
 </div>
 
+<div style="padding-bottom: 10%">
 <div style="width: 100%; height: 40%">
   <img src="images/school-basic-science.png" style="width: 100%; height: 100%">
 </div>
 <br>
-<div style="margin-left: 5%; width: 60%; height: 50%">
+<div class="row">
+<div style="float: left; margin-left: 5%; width: 60%; height: 50%">
 
   <h2>MATS School of Basic Sciences</h2>
-<br>
+
+<ol class="breadcrumb">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Mats School</a></li>
+    <li class="active">MATS School of Basic Science</a></li>
+  </ol>
+
+
   <p>
     The School of Basic Sciences aims to offer programs in the frontier areas relevant to the needs of twenty first century science & technology. The school will play leading role in imparting world class teaching, learning, training and research opportunities in basic sciences . The basic science courses shall be framed by eminent teachers and scientists to cover modern science and technology aspects. The students will equip themselves to avail the teaching and research facilities in scientific organizations, industries and universities of the country and abroad.
   </p>
@@ -533,6 +559,13 @@ cursor: pointer;
   <p>
     Under these courses, the specializations will be offered in selected science subjects at Post graduation level. Advanced knowledge will be imparted in the chosen subjects which will lead to teaching, research, or industrial profession. In addition to the regular subjects (like Physics, Chemistry, Mathematics, Botany) some newer subjects like Nano-Science & Technology, Software Engineering, Computational Mathematics, Materials Science and Condensed Matter Physics, Environmental and Non-conventional Energy Sciences will also be undertaken at M. Sc. level.
   </p>
+</div>
+<div style="font-family: Open Sans; float: left; margin-top: 3%; margin-left: 5%; width: 25%; height: 50%">
+  <button class="sidebtn" style="width: 80%; height: 50%"><b><span style="font-size: 20px">NAAC</span><br>&nbsp;</b></button><br>
+  <button class="sidebtn" style="width: 80%; height: 50%; margin-top: 1%"><b><span style="font-size: 20px">ONLINE FORM</span><br><span style="color: #808ca4; font-size: 13px;">Get Online Admission</span></b></button><br>
+  <button class="sidebtn" style="width: 80%; height: 50%; margin-top: 1%"><b><span style="font-size: 20px">MATS CAREER</span><br><span style="color: #808ca4; font-size: 13px;">Join with Us</span></b></button><br>
+  <button class="sidebtn" style="width: 80%; height: 50%; margin-top: 1%"><b><span style="font-size: 20px">VTP COURSES</span><br><span style="color: #808ca4; font-size: 13px;">Vocational Training Program</span></b></button>
+</div>
 </div>
 <br><br>
 <strong><h3 style="margin-left: 5%; width: 60%;font-weight: bold">POST GRADUATE PROGRAM</h3></strong>
@@ -554,9 +587,7 @@ cursor: pointer;
   <p>Contact - admissions@matsuniversity.ac.in</p>
 </div>
 </div>
-
-
-
+</div>
 
 
   <footer style="background-color: #333333; font-family: raleway;">
@@ -718,7 +749,7 @@ cursor: pointer;
 <div class="row" style="background-color: #292929; width: 100%; color: #555; margin: 0px; padding-bottom: 2%;font-size: 20px; margin-top: -3%; padding-top: 2%;">
     <div class="col-sm-3 ">
         <div class="mycontent-left lowerfooterimg" style="padding-left: 70%;">
-            <img src="logo.jpg" style="width: 100%; height: 100%">
+            <img src="logo.png" style="width: 100%; height: 100%">
         </div>
     </div>
     <div class="col-sm-9 lowerfooter">
