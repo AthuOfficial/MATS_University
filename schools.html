@@ -1,7 +1,9 @@
 <!DOCTYPE>
 <html>
 
-<head><title>MATS University</title>
+<head>
+    <title>MATS University
+    </title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="stylesheet" href="style.css" type="text/css">
@@ -10,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <!-- Latest compiled and miniedif CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
@@ -95,7 +98,6 @@
         }
 
     </style>
-
     <style>
         .accordion {
             background-color: #eee;
@@ -110,7 +112,8 @@
         }
 
         button.accordion.active, button.accordion:hover {
-            background-color: #ddd;
+            background-color: #63b2f5;
+            color: white;
         }
 
         button.accordion:after {
@@ -145,41 +148,22 @@
             border-top: 0.5px solid #f3f7fa;
             cursor: pointer;
         }
+        .sidebtn{
+            text-align: left;
+            color: #274472;
+            background: #e2eaf2;
+            padding: 15px 20px 15px 45px;
+            position: relative;
+            border: 0px;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            cursor: pointer;
+        }
+        .sidebtn:hover{
+            color: white;
+            background-color: #63b2f5;
+        }
     </style>
-    <script>
-        var acc = document.getElementsByClassName("accordion");
-        var i;
-
-        for (i = 0; i < acc.length; i++) {
-            acc[i].onclick = function() {
-                this.classList.toggle("active");
-                var panel = this.nextElementSibling;
-                if (panel.style.maxHeight){
-                    panel.style.maxHeight = null;
-                } else {
-                    panel.style.maxHeight = panel.scrollHeight + "px";
-                }
-            }
-        }
-    </script>
-    <script>
-        function init() {
-            window.addEventListener('scroll', function(e){
-                var distanceY = window.pageYOffset || document.documentElement.scrollTop,
-                    shrinkOn = 20,
-                    header = document.querySelector("header");
-                if (distanceY > shrinkOn) {
-                    classie.add(header,"smaller");
-                    $(".head").css('background','rgb(100,100,100)');
-                } else {
-                    if (classie.has(header,"smaller")) {
-                        classie.remove(header,"smaller");
-                    }
-                }
-            });
-        }
-        window.onload = init();
-    </script>
 </head>
 <body style="font-family: Raleway;">
 <nav id="mainNav" class="navbar navbar-default navbar-fixed-top" style="color: #274472">
@@ -192,14 +176,14 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#"><strong>Start Bootstrap</strong></a>
+            <a class="navbar-brand" href="#"><strong style="color: #337ab7">MATS University</strong></a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><strong>About MATS</strong><b class="caret"></b></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><strong style="color: #337ab7">About MATS</strong><b class="caret" style="color: #337ab7"></b></a>
                     <ul class="dropdown-menu animated slideDown">
                         <li><a href="#">Vision and Mission</a></li>
                         <li class="divider"></li>
@@ -225,7 +209,7 @@
                     </ul>
                 </li>
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><strong>Beyond Academics</strong><b class="caret"></b></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><strong style="color: #337ab7">Beyond Academics</strong><b class="caret" style="color: #337ab7"></b></a>
                     <ul class="dropdown-menu animated slideDown">
                         <li><a href="#">MATS Sports</a></li>
                         <li class="divider"></li>
@@ -241,7 +225,7 @@
                     </ul>
                 </li>
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><strong>Academics</strong><b class="caret"></b></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><strong style="color: #337ab7">Academics</strong><b class="caret" style="color: #337ab7"></b></a>
                     <ul class="dropdown-menu animated slideDown">
                         <li><a href="#">Academic Scheduling</a></li>
                         <li class="divider"></li>
@@ -259,7 +243,7 @@
                     </ul>
                 </li>
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><strong>MATS Schools</strong><b class="caret"></b></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><strong style="color: #337ab7">MATS Schools</strong><b class="caret" style="color: #337ab7"></b></a>
                     <ul class="dropdown-menu animated slideDown">
                         <li><a href="#">MATS School of Basic Sciences</a></li>
                         <li class="divider"></li>
@@ -289,7 +273,7 @@
                     </ul>
                 </li>
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><strong>Distance Education</strong><b class="caret"></b></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><strong style="color: #337ab7">Distance Education</strong><b class="caret" style="color: #337ab7"></b></a>
                     <ul class="dropdown-menu animated slideDown">
                         <li><a href="#">Overview</a></li>
                         <li class="divider"></li>
@@ -309,7 +293,7 @@
                     </ul>
                 </li>
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><strong>School Programs</strong><b class="caret"></b></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><strong style="color: #337ab7">School Programs</strong><b class="caret" style="color: #337ab7"></b></a>
                     <ul class="dropdown-menu animated slideDown">
                         <li><a href="#">Teaching Pedagogy</a></li>
                         <li class="divider"></li>
@@ -321,7 +305,7 @@
                     </ul>
                 </li>
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><strong>Gallery</strong><b class="caret"></b></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><strong style="color: #337ab7">Gallery</strong><b class="caret" style="color: #337ab7"></b></a>
                     <ul class="dropdown-menu animated slideDown">
                         <li><a href="#">MATS Utsav</a></li>
                         <li class="divider"></li>
@@ -341,42 +325,60 @@
     <!-- /.container -->
 </nav>
 
-<div style="width: 100%; height: 40%">
-    <img src="images/school-basic-science.png" style="width: 100%; height: 100%">
-</div>
-<br>
-<div style="margin-left: 5%; width: 60%; height: 50%">
+<div style="padding-bottom: 10%">
+    <div style="width: 100%; height: 40%">
+        <img src="images/school-basic-science.png" style="width: 100%; height: 100%">
+    </div>
+    <br>
+    <div class="row">
+        <div style="float: left; margin-left: 5%; width: 60%; height: 50%">
 
-    <h2>MATS School of Basic Sciences</h2>
+            <h2>MATS School of Basic Sciences</h2>
+
+            <ol class="breadcrumb">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Mats School</a></li>
+                <li class="active">MATS School of Basic Science</a></li>
+            </ol>
+
+
+            <p>
+                The School of Basic Sciences aims to offer programs in the frontier areas relevant to the needs of twenty first century science & technology. The school will play leading role in imparting world class teaching, learning, training and research opportunities in basic sciences . The basic science courses shall be framed by eminent teachers and scientists to cover modern science and technology aspects. The students will equip themselves to avail the teaching and research facilities in scientific organizations, industries and universities of the country and abroad.
+            </p>
+            <br>
+            <p>
+                Under these courses, the specializations will be offered in selected science subjects at Post graduation level. Advanced knowledge will be imparted in the chosen subjects which will lead to teaching, research, or industrial profession. In addition to the regular subjects (like Physics, Chemistry, Mathematics, Botany) some newer subjects like Nano-Science & Technology, Software Engineering, Computational Mathematics, Materials Science and Condensed Matter Physics, Environmental and Non-conventional Energy Sciences will also be undertaken at M. Sc. level.
+            </p>
+        </div>
+        <div style="font-family: Open Sans; float: left; margin-top: 3%; margin-left: 5%; width: 25%; height: 50%">
+            <button class="sidebtn" style="width: 80%; height: 50%"><b><span style="font-size: 20px">NAAC</span><br>&nbsp;</b></button><br>
+            <button class="sidebtn" style="width: 80%; height: 50%; margin-top: 1%"><b><span style="font-size: 20px">ONLINE FORM</span><br><span style="color: #808ca4; font-size: 13px;">Get Online Admission</span></b></button><br>
+            <button class="sidebtn" style="width: 80%; height: 50%; margin-top: 1%"><b><span style="font-size: 20px">MATS CAREER</span><br><span style="color: #808ca4; font-size: 13px;">Join with Us</span></b></button><br>
+            <button class="sidebtn" style="width: 80%; height: 50%; margin-top: 1%"><b><span style="font-size: 20px">VTP COURSES</span><br><span style="color: #808ca4; font-size: 13px;">Vocational Training Program</span></b></button>
+        </div>
+    </div>
+    <br><br>
+    <strong><h3 style="margin-left: 5%; width: 60%;font-weight: bold">POST GRADUATE PROGRAM</h3></strong>
     <br>
-    <p>
-        The School of Basic Sciences aims to offer programs in the frontier areas relevant to the needs of twenty first century science & technology. The school will play leading role in imparting world class teaching, learning, training and research opportunities in basic sciences . The basic science courses shall be framed by eminent teachers and scientists to cover modern science and technology aspects. The students will equip themselves to avail the teaching and research facilities in scientific organizations, industries and universities of the country and abroad.
-    </p>
-    <br>
-    <p>
-        Under these courses, the specializations will be offered in selected science subjects at Post graduation level. Advanced knowledge will be imparted in the chosen subjects which will lead to teaching, research, or industrial profession. In addition to the regular subjects (like Physics, Chemistry, Mathematics, Botany) some newer subjects like Nano-Science & Technology, Software Engineering, Computational Mathematics, Materials Science and Condensed Matter Physics, Environmental and Non-conventional Energy Sciences will also be undertaken at M. Sc. level.
-    </p>
-</div>
-<br><br>
-<strong><h3 style="margin-left: 5%; width: 60%;font-weight: bold">POST GRADUATE PROGRAM</h3></strong>
-<br>
-<div style="width: 60%; margin-left: 5%">
-    <button class="accordion"><b>M. Sc. (Master of Science)</b></button>
-    <div style="background-color: #f2f2f2" class="panel">
-        <br>
-        <p style="font-weight: bold">Duration</p>
-        <p>Two Years (or four semesters) </p>
-        <br>
-        <p style="font-weight: bold">Academic Year </p>
-        <p>July to June.</p>
-        <br>
-        <p style="font-weight: bold">Stream</p>
-        <p>Chemistry</p>
-        <br>
-        <p style="font-weight: bold">Course Structure </p>
-        <p>Contact - admissions@matsuniversity.ac.in</p>
+    <div style="width: 60%; margin-left: 5%">
+        <button class="accordion"><b>M. Sc. (Master of Science)</b></button>
+        <div style="background-color: #f2f2f2" class="panel">
+            <br>
+            <p style="font-weight: bold">Duration</p>
+            <p>Two Years (or four semesters) </p>
+            <br>
+            <p style="font-weight: bold">Academic Year </p>
+            <p>July to June.</p>
+            <br>
+            <p style="font-weight: bold">Stream</p>
+            <p>Chemistry</p>
+            <br>
+            <p style="font-weight: bold">Course Structure </p>
+            <p>Contact - admissions@matsuniversity.ac.in</p>
+        </div>
     </div>
 </div>
+
 <footer style="background-color: #333333; font-family: raleway;">
     <div style="padding-top: 4%; margin-left: -50px">
         <div class="container" style="color: #CCC">
@@ -532,7 +534,7 @@
 <div class="row" style="background-color: #292929; width: 100%; color: #555; margin: 0px; padding-bottom: 2%;font-size: 20px; margin-top: -3%; padding-top: 2%;">
 
     <div class="col-sm-6" >
-        <img width="20%" height="20%" src="logo.jpg" style="margin-top: 8px; padding-right: 2%; padding-left: 1%;border-right: 1px solid #4A4A4A; float: left; margin-right: 2%;">
+        <img width="20%" height="20%" src="logo.png" style="margin-top: 8px; padding-right: 2%; padding-left: 1%;border-right: 1px solid #4A4A4A; float: left; margin-right: 2%;">
         <div style="font-size: 70%; padding-top: 4%;">
             <strong>MATS University,Raipur,CG MATS Tower,Pandri,Raipur(492 002) Website:www.matsuniversity.ac.in<br>Tel:+91 7000910036<br>Email: admissions@matsuniversity.ac.in</strong>
         </div>
@@ -567,6 +569,22 @@
             top: 100
         }
     })
+</script>
+<script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+        acc[i].onclick = function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight){
+                panel.style.maxHeight = null;
+            } else {
+                panel.style.maxHeight = panel.scrollHeight + "px";
+            }
+        }
+    }
 </script>
 </body>
 </html>
